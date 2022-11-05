@@ -1,33 +1,40 @@
 package com.example.regisbackendseguridad.Models;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 @Data
-@Document()
+@Document
 public class PermisosRol {
     @Id
     private String id;
-    private String id_rol;
-    private String id_permiso;
+    @DBRef
+    private Rol rol;
+    @DBRef
+    private Permiso permiso;
+
+    public PermisosRol() {
+    }
 
     public String getId(){
         return id;
     }
 
-    public String getId_rol(){
-        return id_rol;
+    public Rol getRol() {
+        return rol;
     }
 
-    public void setId_rol(String id_rol){
-        this.id_rol = id_rol;
+    public Permiso getPermiso() {
+        return permiso;
     }
 
-    public String getId_permiso(){
-        return id_permiso;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 
-    public void setId_permiso(String id_permiso){
-        this.id_permiso = id_permiso;
+    public void setPermiso(Permiso permiso) {
+        this.permiso = permiso;
     }
     
 }
