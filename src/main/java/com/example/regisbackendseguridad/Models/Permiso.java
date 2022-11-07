@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Permiso {
     @Id
-    private String id;
+    private String _id;
     private String url;
     private String metodo;
 
@@ -16,8 +16,8 @@ public class Permiso {
         this.metodo = metodo;
     }
 
-    public String getId(){
-        return id;
+    public String get_Id(){
+        return _id;
     }
 
     public String getUrl(){
