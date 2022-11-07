@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document()
 public class Usuario {
     @Id
-    private String id;
+    private String _id;
     private String seudonimo;
     private String correo;
     private String contrasena;
@@ -18,8 +18,8 @@ public class Usuario {
         this.contrasena = contrasena;
     }
     
-    public String getId(){
-        return id;
+    public String get_Id(){
+        return _id;
     }
 
     public String getSeudonimo(){
