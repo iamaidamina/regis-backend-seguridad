@@ -7,15 +7,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Rol {
     @Id
-    private String id;
+    private String _id;
     private String nombre;
+
+    public Rol() {
+        
+    }
 
     public Rol(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getId(){
-        return id;
+    public String get_Id(){
+        return _id;
     }
 
     public String getNombre(){
