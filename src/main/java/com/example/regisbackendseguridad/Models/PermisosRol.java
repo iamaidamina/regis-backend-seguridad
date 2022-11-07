@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class PermisosRol {
     @Id
-    private String id;
+    private String _id;
     @DBRef
     private Rol rol;
     @DBRef
@@ -17,8 +17,8 @@ public class PermisosRol {
     public PermisosRol() {
     }
 
-    public String getId(){
-        return id;
+    public String get_Id(){
+        return _id;
     }
 
     public Rol getRol() {
